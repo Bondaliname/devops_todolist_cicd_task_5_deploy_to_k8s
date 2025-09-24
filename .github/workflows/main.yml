@@ -129,7 +129,7 @@ jobs:
   deploy-helm-development:
     name: Deploy Helm to Development environment
     needs: [ docker-ci, helm-ci ]
-    uses: ./.github/workflows/deployment-workflow.yml
+    uses: ./.github/workflows/deployment-main.yml
     with:
       environment: development
       version: ${{ github.sha }}
@@ -139,7 +139,7 @@ jobs:
   deploy-helm-staging:
     name: Deploy Helm to Staging environment
     needs: deploy-helm-development
-    uses: ./.github/workflows/deployment-workflow.yml
+    uses: ./.github/workflows/deployment-main.yml
     with:
       environment: staging
       version: ${{ github.sha }}

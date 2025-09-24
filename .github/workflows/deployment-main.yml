@@ -11,7 +11,7 @@ on:
       repository:
         required: false
         description: 'Name of the docker repository'
-        default: zaavee/todoapp
+        default: ikulyk404/todoapp
         type: string
       version:
         required: true
