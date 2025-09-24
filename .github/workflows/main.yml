@@ -124,7 +124,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: helm-package
-        path: ./*.tgz
+        path: ./todoapp-*.tgz
 
   deploy-helm-development:
     name: Deploy Helm to Development environment
